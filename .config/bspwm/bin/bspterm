@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# launch termite with other config
+if [ "$1" == "-f" ]; then
+	LIBGL_ALWAYS_SOFTWARE=1 alacritty --class termite-float --config-file ~/.config/alacritty.yml
+else
+	LIBGL_ALWAYS_SOFTWARE=1 alacritty --config-file ~/.config/alacritty.yml
+fi

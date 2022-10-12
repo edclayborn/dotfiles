@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Terminate if compton is already running
+killall -q compton
+killall -q picom
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x compton >/dev/null; do sleep 1; done
+
+
+# Launch compton 
+# compton --config ~/.config/bspwm/compton.conf &
+
+# applies opacity rules but not inactive opactiy
+#exec_always dbus-launch compton -CG --config ~/.config/bspwm/compton.conf &
+
+# applies inactive-opacity but not opacity-rule
+#dbus-launch compton -CG --config ~/.config/bspwm/compton.conf &
+picom -bc --config ~/.config/picom.conf --animations
+# picom --experimental-backends --config ~/.config/picom.jonaburg.conf  &
