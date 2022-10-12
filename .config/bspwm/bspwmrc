@@ -202,6 +202,7 @@ parcellite &
 dropbox &
 emacs --daemon &
 fcitx5 &
+imwheel &
 #firefox &
 #thunar &
 

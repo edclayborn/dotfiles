@@ -87,6 +87,9 @@ ctrl + alt + Escape
 
 # Fullscreen or Monocle
 super + f
+	bspc node -t "~"fullscreen
+	
+super + g
 	bspc desktop -l next
 	
 # Split horizontal, vertical or cancel
