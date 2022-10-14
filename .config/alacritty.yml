@@ -1,0 +1,53 @@
+import:
+ - ~/.config/rose-pine-alacritty-git/dist/rose-pine-moon.yml
+
+colors:
+  cursor:
+    cursor: "0xeb6f92"
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+  blink_interval: 400
+  unfocused_hollow: false
+  thickness: 0.185
+
+font:
+  normal:
+    family: monospace
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 16
+
+window:
+  padding:
+   x: 40
+   y: 25
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 16
+  
+window:
+  padding:
+   x: 40
+   y: 256
+  
+window:
+  padding:
+   x: 40
+   y: 25

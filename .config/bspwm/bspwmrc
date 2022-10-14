@@ -5,18 +5,43 @@ export PATH="${PATH}:$HOME/.config/bspwm/bin"
 
 ## Get colors from .Xresources -------------------------------#
 xrdb ~/.Xresources
+# getcolors () {
+# 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
+# 	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
+# 	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
+# 	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+# 	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+# 	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
+# 	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
+# 	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+# 	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
+# 	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+# }
+
+
+# rose-dark
 getcolors () {
-	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
-	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
-	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
-	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
-	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
-	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
-	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
-	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
-	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
-	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+	FOREGROUND="#e0def4"
+	BACKGROUND="#2a273f"
+	BLACK="#232136"
+	RED="#eb6f92"
+	GREEN="#9ccfd8"
+	YELLOW="#f6c177"
+	BLUE="#3e8fb0"
+	MAGENTA="#c4a7e7"
+	CYAN="#908caa"
+	WHITE="#e0def4"
+	ALTBLACK="#1f1d2e"
+	ALTRED="#191724"
+	ALTGREEN="#9ccfd8"
+	ALTYELLOW="#f6c177"
+	ALTBLUE="#31748f"
+	ALTMAGENTA="#c4a7e7"
+	ALTCYAN="#9ccfd8"
+	ALTWHITE="#e0def4"
+
 }
+
 getcolors
 
 ## Configurations -------------------------------#
@@ -53,7 +78,7 @@ bspc config border_width 1
 bspc config window_gap 10
 bspc config split_ratio 0.50
 
-bspc config focused_border_color "$BLUE" 
+bspc config focused_border_color "$MAGENTA" 
 bspc config normal_border_color "$BACKGROUND"
 bspc config active_border_color "$MAGENTA"
 bspc config presel_feedback_color "$GREEN"
