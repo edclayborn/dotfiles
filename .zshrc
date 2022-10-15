@@ -70,6 +70,7 @@ ZSH_THEME="archcraft"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	colored-man-pages
 )
 
 
@@ -107,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 alias ec="emacsclient -nc"
 alias fp="find . -name"
 alias xargs='xargs '
-alias zshconfig="geany ~/.zshrc"
+alias zshconfig="emacsclient --create-frame --alternate-editor="" ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
 alias ncmpcpp="termite -c ~/.config/bspwm/termite/config --name=ncmpcpp -e ncmpcpp"
 alias sn="shutdown now"
@@ -131,9 +132,11 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
 
-
+# edits colored-man-page bottom color, since the default is so bad
+less_termcap[so]="${fg_bold[yellow]}"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh/plugins/k/k.sh
 eval "$(zoxide init zsh)"
